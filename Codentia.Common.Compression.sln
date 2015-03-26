@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codentia.Common.Compression", "src\app\Codentia.Common.Compression.csproj", "{15818627-E610-4B5B-B93C-F29B4E37AD97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codentia.Common.Compression.Test", "src\test\Codentia.Common.Compression.Test.csproj", "{991327E8-380F-4D3D-AFD3-2C697810CF5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15818627-E610-4B5B-B93C-F29B4E37AD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15818627-E610-4B5B-B93C-F29B4E37AD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15818627-E610-4B5B-B93C-F29B4E37AD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15818627-E610-4B5B-B93C-F29B4E37AD97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991327E8-380F-4D3D-AFD3-2C697810CF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991327E8-380F-4D3D-AFD3-2C697810CF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991327E8-380F-4D3D-AFD3-2C697810CF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991327E8-380F-4D3D-AFD3-2C697810CF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
