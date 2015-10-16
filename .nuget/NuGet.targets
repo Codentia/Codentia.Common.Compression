@@ -23,6 +23,7 @@
             <PackageSource Include="https://www.nuget.org/api/v2/" />
             <PackageSource Include="https://my-nuget-source/nuget/" />
         -->
+      <PackageSource Include="http://nuget.code.je/nuget" />
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(OS)' == 'Windows_NT'">
@@ -62,12 +63,14 @@
         <PaddedSolutionDir Condition=" '$(OS)' != 'Windows_NT' ">"$(SolutionDir)"</PaddedSolutionDir>
 
         <!-- Commands -->
+	      <UpdateCommand>$(NuGetCommand) update "$(PackagesConfig)" -source "$(PackageSources)" $(NonInteractiveSwitch) $(PaddedSolutionDir)</UpdateCommand>
         <RestoreCommand>$(NuGetCommand) install "$(PackagesConfig)" -source "$(PackageSources)"  $(NonInteractiveSwitch) $(RequireConsentSwitch) -solutionDir $(PaddedSolutionDir)</RestoreCommand>
         <BuildCommand>$(NuGetCommand) pack "$(ProjectPath)" -Properties "Configuration=$(Configuration);Platform=$(Platform)" $(NonInteractiveSwitch) -OutputDirectory "$(PackageOutputDir)" -symbols</BuildCommand>
 
         <!-- We need to ensure packages are restored prior to assembly resolve -->
         <BuildDependsOn Condition="$(RestorePackages) == 'true'">
             RestorePackages;
+	         UpdatePackages;
             $(BuildDependsOn);
         </BuildDependsOn>
 
@@ -100,6 +103,15 @@
         <Exec Command="$(RestoreCommand)"
               LogStandardErrorAsError="true"
               Condition="'$(OS)' == 'Windows_NT' And Exists('$(PackagesConfig)')" />
+    </Target>
+
+    <Target Name="UpdatePackages" DependsOnTargets="CheckPrerequisites">
+    <Exec Command="$(UpdateCommand)"
+          Condition="'$(OS)' != 'Windows_NT' And Exists('$(PackagesConfig)')" />
+
+    <Exec Command="$(UpdateCommand)"
+          LogStandardErrorAsError="true"
+          Condition="'$(OS)' == 'Windows_NT' And Exists('$(PackagesConfig)')" />
     </Target>
 
     <Target Name="BuildPackage" DependsOnTargets="CheckPrerequisites">

@@ -38,20 +38,12 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codentia.Common.Data">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev\lib\Codentia.Common.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Helper">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev\lib\Codentia.Common.Helper.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Common.Types">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev\lib\Codentia.Common.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Codentia.Test">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev\lib\Codentia.Test.dll</HintPath>
+    <Reference Include="Codentia.Test, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev-20151016071421\lib\Codentia.Test.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
