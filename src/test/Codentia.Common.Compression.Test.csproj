@@ -38,9 +38,8 @@
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Codentia.Test, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev-20151016071421\lib\Codentia.Test.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Codentia.Test">
+      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0-dev-20160216094935\lib\Codentia.Test.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
@@ -74,7 +73,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="TestData\NewFolder.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
