@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Codentia.Test">
-      <HintPath>..\..\packages\Codentia.Test.dll.1.2.0.77\lib\Codentia.Test.dll</HintPath>
+      <HintPath>..\..\packages\Codentia.Test.dll.2.0.0.1\lib\Codentia.Test.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
